@@ -25,9 +25,15 @@ public class BotConfig extends TelegramLongPollingBot{
 			
 			sendMessage = commands.executeCommand(update);
 		
-		} catch (IOException | ParserConfigurationException | SAXException e1) {
+		} catch (IOException e1) {
 			
 			e1.printStackTrace();
+		} catch (NullPointerException e) {
+			e.printStackTrace();
+		} catch (ParserConfigurationException e) {
+			e.printStackTrace();
+		} catch (SAXException e) {
+			e.printStackTrace();
 		}
 		
 		try {
